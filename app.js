@@ -33,6 +33,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 
+//Require Passport
+require ("./config/passport")(app)
+
+
 //const index = require('./routes/index');
 app.use('/', index);
 app.use('/user', authRoutes)
@@ -43,9 +47,6 @@ app.use(session({
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
 }));
-//Tengo una carpeta de configuracion de PASSPORT
-require ("./config/passport")(app)
-
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
