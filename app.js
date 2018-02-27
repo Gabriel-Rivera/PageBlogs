@@ -12,6 +12,7 @@ const MongoStore   = require('connect-mongo')(session);
 //Aqui declaramos las rutas para ser utilizadas más abajo
 const authRoutes = require ("./routes/auth.js")
 const index = require('./routes/index');
+const create = require('./routes/create')
 
 mongoose.connect('mongodb://localhost/pageblogs');
 
@@ -33,9 +34,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 
-//const index = require('./routes/index');
+//Require Passport
+require ("./config/passport")(app)
+
+
 app.use('/', index);
-app.use('/user', authRoutes)
+app.use('/user', authRoutes);
+app.use('/create', create)
 
 app.use(session({
   secret: 'ironfundingdev',
@@ -43,9 +48,6 @@ app.use(session({
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
 }));
-//Tengo una carpeta de configuracion de PASSPORT
-require ("./config/passport")(app)
-
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');

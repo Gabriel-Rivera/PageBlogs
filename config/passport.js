@@ -1,7 +1,8 @@
+const passport = require ("passport")
 const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('../models/User');
 const bcrypt             = require('bcrypt');
-const passport = require ("passport")
+
 
 module.exports = function (app) {
   // NEW
@@ -65,7 +66,7 @@ module.exports = function (app) {
       return next(null, user);
     });
   }));
-  // NEW
+  // NEW        
   
   app.use(passport.initialize());
   app.use(passport.session());
