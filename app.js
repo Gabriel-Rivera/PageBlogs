@@ -12,6 +12,7 @@ const MongoStore   = require('connect-mongo')(session);
 //Aqui declaramos las rutas para ser utilizadas más abajo
 const authRoutes = require ("./routes/auth.js")
 const index = require('./routes/index');
+const create = require('./routes/create')
 
 mongoose.connect('mongodb://localhost/pageblogs');
 
@@ -37,9 +38,9 @@ app.use(layouts);
 require ("./config/passport")(app)
 
 
-//const index = require('./routes/index');
 app.use('/', index);
-app.use('/user', authRoutes)
+app.use('/user', authRoutes);
+app.use('/create', create)
 
 app.use(session({
   secret: 'ironfundingdev',

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div>
+        <h2>Tell us about your experience!</h2>
+    </div>
+    <div>
+        <form action="/places/new" method="post">
+            <input placeholder="Title" type="text" name="title">
+            <input placeholder="start typing here" type="text" name="window">
+        </form>
+    </div>
+    </div>
+    <section>
+            <h3>Upload your photo</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+              <input placeholder="description" type="text" name="name">
+              <input type="file" name="photo" accept="image/*">
+              <input type="submit" value="Save">
+            </form>
+          </section>
+  </body>
+</html>
