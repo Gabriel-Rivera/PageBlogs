@@ -9,10 +9,11 @@ const ArticleSchema = new Schema({
   pathPicture   : [{type : String}]
 });
 
-// ArticleSchema.virtual('timeRemaining').get(function () {
-//   let remaining = moment(this.deadline).fromNow(true).split(' ');
-//   let [days, unit] = remaining;
-//   return { days, unit };
-// });
-
 module.exports = mongoose.model('Article', ArticleSchema);
+
+
+
+// <%article.forEach(function(file){%>
+//   <img src='<%=file.pathPicture %>'>
+// <%})%>
+

@@ -35,7 +35,7 @@ router.post('/new', (req, res, next) =>{
   router.post('/:id', upload.single('photo'), (req, res, next) =>{
     // console.log('uploading photo');
     // console.log(req.file);
-    const pic = new Picture({})
+
     Article.findById(req.params.id)
     .then(article=>{
       console.log(article);
