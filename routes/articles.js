@@ -29,29 +29,24 @@ router.post('/new', (req, res, next) =>{
     Article.findById(req.params.id)
       .then(result => res.render("articles/single", {article:result}))
   });
-
-
-  router.get('/', (req, res, next) => {
-    res.render('articles');
-  });
   
   const upload = multer({ dest: './public/uploads/' });
   
-  router.post('/upload', upload.single('photo'), (req, res) =>{
-    console.log('uploading photo');
-    console.log(req.file);
-  
-  
-    const pic = new Picture({
-      name: req.body.pathPicture,
-      path: `/uploads/${req.file.filename}`,
-      originalName: req.file.originalname
-    });
-  
-    pic.save((err) => {
-        res.redirect('/');
-    });
-  });
+  router.post('/:id', upload.single('photo'), (req, res, next) =>{
+    // console.log('uploading photo');
+    // console.log(req.file);
+    const pic = new Picture({})
+    Article.findById(req.params.id)
+    .then(article=>{
+      console.log(article);
+      article.pathPicture = `/uploads/${req.file.filename}`;
+      article.save();
+      res.redirect('/articles/'+req.params.id);
+    })
+    .catch(err=>res.send(err))
+
+
+});
 
 
 module.exports = router;

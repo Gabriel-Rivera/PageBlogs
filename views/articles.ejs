@@ -4,38 +4,57 @@
     <meta charset="utf-8">
     <title><%= title %></title>
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  </style>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
   </head>
   <body>
-    <div>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Sitio Web</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Inicio</a></li>        
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/user/signup"><span class="fas fa-user-circle"></span> Registrase</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/user/login"> Acceder<spanclass="caret" class="glyphicon glyphicon-log-in"></span></a>
+                <ul class="dropdown-menu nav navbar-nav navbar-right navbar-inverse" >
+                    <li><a href="#"> <i class="fas fa-user"></i>   User</a></li> 
+                  <li><a href="#"><i class="fab fa-facebook-square"></i>   Facebook</a></li>
+                  <li><a href="#"><i class="fab fa-google"></i>   Google</a></li>
+                </ul>
+              </li>
+              <li><a href="/user/login"><span class="fas fa-sign-out-alt"></span> Salir</a></li>
+            </ul>
+          </div>
+        </nav>
+    <div  class="container">
+        <div>
         <h2>Tell us about your experience!</h2>
     </div>
-    <div>
-        <form action ="/articles/new"method="post">
-            <input placeholder="Title" type="text" name="title">
-            <select name="category">
-                <option value="" disabled selected>Select your option</option>
-                <option value="city">City</option>
-                <option value="beach">Beach</option>
-                <option value="nature">Nature</option>
-                <option value="lodging">Lodging</option>
-                <option value="restaurant">Restaurant</option>
-                <option value="bar">Bar</option>
-                <option value="other">Other</option>
-            <input placeholder="start typing here" type="text" name="content">
-            <input type="submit" value="save">
-          </form>
-    </div>
-    <section>
-            <h3>Upload your photo</h2>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-              <input placeholder="description" type="text" name="name">
-              <input type="file" name="photo" accept="image/*">
-              <input type="submit" value="Save">
-            </form>
-    </section>
-  </body>
-</html>
 
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6 centered-form">
+              <form class="form-group" action ="/articles/new"method="post">
+                <input placeholder="Title" type="text" name="title">
+                <select name="category">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="city">City</option>
+                    <option value="beach">Beach</option>
+                    <option value="nature">Nature</option>
+                    <option value="lodging">Lodging</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="bar">Bar</option>
+                    <option value="other">Other</option>
+                    <textarea cols="100" rows="30" placeholder="start typing here" type="text" name="content"></textarea>
+                    <input type="submit" value="save">
+              </form>
+          </div>
+        </div>
+    </div>

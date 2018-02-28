@@ -1,3 +1,33 @@
+</style>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Sitio Web</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Inicio</a></li>        
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/user/signup"><span class="fas fa-user-circle"></span> Registrase</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/user/login"> Acceder<spanclass="caret" class="glyphicon glyphicon-log-in"></span></a>
+        <ul class="dropdown-menu nav navbar-nav navbar-right navbar-inverse" >
+            <li><a href="#"> <i class="fas fa-user"></i>   User</a></li> 
+          <li><a href="#"><i class="fab fa-facebook-square"></i>   Facebook</a></li>
+          <li><a href="#"><i class="fab fa-google"></i>   Google</a></li>
+        </ul>
+      </li>
+      <li><a href="/user/login"><span class="fas fa-sign-out-alt"></span> Salir</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
     <div class="row">
       <div class="col-sm-6 centered-form">
@@ -18,9 +48,9 @@
           <button type="submit">Login</button>
         </form>
       </div>
+    </div>
       <p class="login-message">
             Don't have an account yet?
             <a href="/user/signup">Signup</a>
         </p>
-    </div>
   </div>

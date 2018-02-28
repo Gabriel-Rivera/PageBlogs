@@ -6,7 +6,7 @@ const ArticleSchema = new Schema({
   title         : { type: String, required: true },
   category      : { type: String, required: true },
   content       : { type: String, required: true },
-  pathPicture   : {type : String}
+  pathPicture   : [{type : String}]
 });
 
 // ArticleSchema.virtual('timeRemaining').get(function () {
