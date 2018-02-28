@@ -27,8 +27,8 @@ function startMap() {
         lat: place.geometry.location.lat(),
         lng: place.geometry.location.lng()
       };
-      markers.push(newCenter);
-      console.log(markers);
+     // markers.push(newCenter);
+     // console.log(markers);
       map.setCenter(newCenter);
 
        myMarker = new google.maps.Marker({

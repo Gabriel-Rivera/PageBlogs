@@ -1,6 +1,6 @@
 body {
-  background-color:darkcyan ;
-  padding: 10px;
+  padding-top:50px;
+  background-color: whitesmoke ; 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0;
 
@@ -11,31 +11,34 @@ a {
 }
 
 .header{
-  display: flex;
+  height: 400px;
+  width: 100%;
   justify-content: space-around;
+  background-image: url("../images/playa.jpg");
+  background-repeat: no-repeat;
 }
 .articles{
   position: relative;
 }
 .imagesLeft{
-  width: 15%;
+  width: 20%;
   height: 600px;
   float: left;
 }
 
 .articlesPropios{
-  width: 35%;
+  width: 40%;
   height: 600px;
   float: left;  
 }
 
 .BlogsExternos{
-  width: 35%;
+  width: 40%;
   height: 600px;
  float: left;
 }
 .imagesRight{
-  width: 15%;
+  width: 20%;
   height: 600px;
   float: left;
 
@@ -109,9 +112,12 @@ a {
 .navbar-inverse{
   position: fixed;
 }
-
-.articulosPropios{
-
+.barNav{
+  display: block;
+  text-align: center;
 }
 
+#findBeach{
+  display: inline;
+}
 

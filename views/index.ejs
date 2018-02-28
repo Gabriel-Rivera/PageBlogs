@@ -11,52 +11,49 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Sitio Web</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Inicio</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">P&aacute;gina 1 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">P&aacute;gina 1-1</a></li>
-                <li><a href="#">P&aacute;gina 1-2</a></li>
-                <li><a href="#">P&aacute;gina 1-3</a></li>
-              </ul>
+            <li class="active"><a href="#">Inicio</a></li>        
             </li>
-            <li><a href="#">P&aacute;gina 2</a></li>
-            <li><a href="#">P&aacute;gina 3</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrase</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Acceder</a></li>
+            <li><a href="/user/signup"><span class="fas fa-user-circle"></span> Registrase</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/user/login"> Acceder<spanclass="caret" class="glyphicon glyphicon-log-in"></span></a>
+              <ul class="dropdown-menu nav navbar-nav navbar-right navbar-inverse" >
+                  <li><a href="#"> <i class="fas fa-user"></i>   User</a></li> 
+                <li><a href="#"><i class="fab fa-facebook-square"></i>   Facebook</a></li>
+                <li><a href="#"><i class="fab fa-google"></i>   Google</a></li>
+              </ul>
+            </li>
+            <li><a href="/user/login"><span class="fas fa-sign-out-alt"></span> Salir</a></li>
           </ul>
         </div>
       </nav>
 
   <section class="header">
-    <div></div>
-    <div>
+    
       <h1>BlogsPage</h1>
-    </div>
-    <div>
-      <button type="submit">SignUp</button>
-      <button type="submit">Login</button>
-    </div>
-  </section>
-  <section>
-    <h2>Search
-      <input style="width:500px" type="text" id="findBeach" />
-    </h2>
-    <div id="map"></div>
-  </section>
+    
+ 
+  <!-- <section class="barNav">
+      <h1 style="display:inline">Search</h1>
+      <input class="form-control" style="width:500px" type="text" id="findBeach" />
+  </section> -->
+ </section>
+  <!-- <div id="map"></div> -->
+
   <section class="articles">
-    <div class="imagesLeft">
-      <div class="slider">
+     <div class="imagesLeft">
+    <!--  <div class="slider">
         <ul>
           <li>
             <img src="images/paisaje1.jpeg" alt="">
@@ -104,8 +101,8 @@
             <img src="images/paisaje12.jpeg" alt="">
           </li>
         </ul>
-      </div>
-    </div>
+      </div>-->
+    </div> 
 
     <div class="articlesPropios">
       <h2>Articulos Propios</h2>
@@ -119,8 +116,8 @@
 
       </div>
     </div>
-    <div class="imagesRight">
-      <div class="slider">
+     <div class="imagesRight">
+      <!--<div class="slider">
         <ul>
           <li>
             <img src="images/paisaje10.jpeg" alt="">
@@ -168,14 +165,14 @@
             <img src="images/paisaje14.jpeg" alt="">
           </li>
         </ul>
-      </div>
-    </div>
+      </div>-->
+    </div> 
   </section>
-  <footer>
+  <!-- <footer>
     <div>
       Pie de Pagina
     </div>
-  </footer>
+  </footer> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQJiQshNgxE0CT15h-nLdnGWF2yoKZsnw&libraries=places">
   </script>
   <script type="text/javascript" src="javascripts/main.js"></script>

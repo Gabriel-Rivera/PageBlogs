@@ -2,6 +2,7 @@ const express      = require('express');
 const path         = require('path');
 const favicon      = require('serve-favicon');
 const logger       = require('morgan');
+const multer = require("multer");
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
@@ -14,7 +15,8 @@ const authRoutes = require ("./routes/auth.js")
 const index = require('./routes/index');
 const create = require('./routes/create')
 
-mongoose.connect('mongodb://localhost/pageblogs');
+mongoose.connect('mongodb://localhost/pageblogs')
+  .then(console.log("Connected!!"))
 
 const app = express();
 
@@ -24,7 +26,7 @@ app.set('view engine', 'ejs');
 
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
-
+ 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
