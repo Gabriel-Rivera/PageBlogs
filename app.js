@@ -12,7 +12,8 @@ const MongoStore   = require('connect-mongo')(session);
 //Aqui declaramos las rutas para ser utilizadas más abajo
 const authRoutes = require ("./routes/auth.js")
 const index = require('./routes/index');
-const create = require('./routes/create')
+//const create = require('./routes/create');
+const articles = require('./routes/articles');
 
 mongoose.connect('mongodb://localhost/pageblogs');
 
@@ -40,10 +41,10 @@ require ("./config/passport")(app)
 
 app.use('/', index);
 app.use('/user', authRoutes);
-app.use('/create', create)
+app.use('/articles', articles);
 
 app.use(session({
-  secret: 'ironfundingdev',
+  secret: 'tamales',
   resave: false,
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })

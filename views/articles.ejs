@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  </head>
+  <body>
+    <div>
+        <h2>Tell us about your experience!</h2>
+    </div>
+    <div>
+        <form action ="/articles/new"method="post">
+            <input placeholder="Title" type="text" name="title">
+            <select name="category">
+                <option value="" disabled selected>Select your option</option>
+                <option value="city">City</option>
+                <option value="beach">Beach</option>
+                <option value="nature">Nature</option>
+                <option value="lodging">Lodging</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="bar">Bar</option>
+                <option value="other">Other</option>
+            <input placeholder="start typing here" type="text" name="content">
+            <input type="submit" value="save">
+          </form>
+    </div>
+    <section>
+            <h3>Upload your photo</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+              <input placeholder="description" type="text" name="name">
+              <input type="file" name="photo" accept="image/*">
+              <input type="submit" value="Save">
+            </form>
+    </section>
+  </body>
+</html>
+
