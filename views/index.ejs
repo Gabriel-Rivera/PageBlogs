@@ -2,12 +2,6 @@
 
 <head>
   <title>My First Map</title>
-  <style>
-    #map {
-      height: 300px;
-      width: 100%;
-    }
-  </style>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -26,146 +20,42 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/user/signup"><span class="fas fa-user-circle"></span> Registrase</a></li>
+            <li><a href="/user/signup"><span class="fas fa-user-circle"></span> Registrarse</a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/user/login"> Acceder<spanclass="caret" class="glyphicon glyphicon-log-in"></span></a>
               <ul class="dropdown-menu nav navbar-nav navbar-right navbar-inverse" >
                   <li><a href="/user/login"> <i class="fas fa-user"></i>   User</a></li> 
                 <li><a href="#"><i class="fab fa-facebook-square"></i>   Facebook</a></li>
-                <li><a href="#"><i class="fab fa-google"></i>   Google</a></li>
+                <li><a href="/auth/google"><i class="fab fa-google"></i>   Google</a></li>
               </ul>
             </li>
-            <li><a href="/user/login"><span class="fas fa-sign-out-alt"></span> Salir</a></li>
+            <li><a href="/user/logout"><span class="fas fa-sign-out-alt"></span> Salir</a></li>
           </ul>
         </div>
       </nav>
-
-  <section class="header">
-    
-      <h1>BlogsPage</h1>
-    
- 
-  <!-- <section class="barNav">
-      <h1 style="display:inline">Search</h1>
-      <input class="form-control" style="width:500px" type="text" id="findBeach" />
-  </section> -->
- </section>
-  <!-- <div id="map"></div> -->
-
+<div id="background-image">
+  <div id="logo"></div>
+  <h4 class="h4" >Search</h4>
+  <input style="width:500px" type="text" id="findBeach" />
+  <div id="map"></div>
+</div>
   <section class="articles">
      <div class="imagesLeft">
-    <!--  <div class="slider">
-        <ul>
-          <li>
-            <img src="images/paisaje1.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje2.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje3.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje4.jpeg" alt="">
-          </li>
-        </ul>
-      </div>
 
-      <div class="slider">
-        <ul>
-          <li>
-            <img src="images/paisaje5.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje6.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje1.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje2.jpeg" alt="">
-          </li>
-        </ul>
-      </div>
-      <div class="slider">
-        <ul>
-          <li>
-            <img src="images/paisaje7.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje8.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje9.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje12.jpeg" alt="">
-          </li>
-        </ul>
-      </div>-->
     </div> 
-
-    <div class="articlesPropios">
+    <div  class="articlesPropios box effect5">
       <h2>Articulos Propios</h2>
       <div>
 
       </div>
     </div>
-    <div class="BlogsExternos">
+    <div class="BlogsExternos box effect5">
       <h2>Blogs Externos</h2>
       <div>
 
       </div>
     </div>
      <div class="imagesRight">
-      <!--<div class="slider">
-        <ul>
-          <li>
-            <img src="images/paisaje10.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje11.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje12.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje13.jpeg" alt="">
-          </li>
-        </ul>
-      </div>
-
-      <div class="slider">
-        <ul>
-          <li>
-            <img src="images/paisaje14.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje15.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje16.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje17.jpeg" alt="">
-          </li>
-        </ul>
-      </div>
-      <div class="slider">
-        <ul>
-          <li>
-            <img src="images/paisaje5.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje12.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje1.jpeg" alt="">
-          </li>
-          <li>
-            <img src="images/paisaje14.jpeg" alt="">
-          </li>
-        </ul>
-      </div>-->
+      
     </div> 
   </section>
   <!-- <footer>

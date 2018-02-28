@@ -7,7 +7,7 @@ const userSchema = new Schema({
   password   : {type: String },
   description: {type: String},
   imgUrl     : { type: String, default: "" },
-  facebookID: {type: String},
+ 
   googleID: {type: String}
 });
 

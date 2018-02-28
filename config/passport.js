@@ -2,6 +2,7 @@ const passport = require ("passport")
 const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('../models/User');
 const bcrypt             = require('bcrypt');
+const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 
 
 module.exports = function (app) {
@@ -67,6 +68,36 @@ module.exports = function (app) {
     });
   }));
   // NEW        
+//********************************LOGIN GOOGLE */
+passport.use(new GoogleStrategy({
+  clientID: "300716582103-08lbdf4lsloalc75i63d5llh5q09houa.apps.googleusercontent.com",
+  clientSecret: "AnN-TOvsdi6Pm_VU1cezzIE8",
+  callbackURL: "/auth/google/callback"
+}, (accessToken, refreshToken, profile, done) => {
+  User.findOne({ googleID: profile.id }, (err, user) => {
+    if (err) {
+      return done(err);
+    }
+    if (user) {
+      return done(null, user);
+    }
+
+    const newUser = new User({
+      googleID: profile.id
+    });
+
+    newUser.save((err) => {
+      if (err) {
+        return done(err);
+      }
+      done(null, newUser);
+    });
+  });
+
+}));
+
+
+
   
   app.use(passport.initialize());
   app.use(passport.session());
