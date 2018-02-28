@@ -13,6 +13,7 @@ function startMap() {
     );
     
     var input = document.getElementById("findBeach");
+   
 
     function autocomplete(input){
     const dropdown = new google.maps.places.Autocomplete(input);
@@ -39,10 +40,12 @@ function startMap() {
         });
         
     });
-        
-}
+   }
+  
+  
     autocomplete(input);
   
+    
   
   }
   

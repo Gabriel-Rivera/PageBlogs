@@ -39,7 +39,7 @@ router.post('/new', (req, res, next) =>{
     Article.findById(req.params.id)
     .then(article=>{
       console.log(article);
-      article.pathPicture = `/uploads/${req.file.filename}`;
+      article.pathPicture.push(`/uploads/${req.file.filename}`)
       article.save();
       res.redirect('/articles/'+req.params.id);
     })

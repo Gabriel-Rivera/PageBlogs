@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title><%= title %></title>
-
-  </style>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
-  </head>
-  <body>
+<div id="map" hidden></div>
       <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -41,6 +29,7 @@
     <div class="container">
         <div class="row">
           <div class="col-sm-6 centered-form">
+              <input style="width:500px" type="text" id="findBeach"/>
               <form class="form-group" action ="/articles/new"method="post">
                 <input placeholder="Title" type="text" name="title">
                 <select name="category">
@@ -52,9 +41,11 @@
                     <option value="restaurant">Restaurant</option>
                     <option value="bar">Bar</option>
                     <option value="other">Other</option>
+                     
                     <textarea cols="100" rows="30" placeholder="start typing here" type="text" name="content"></textarea>
                     <input type="submit" value="save">
               </form>
+              
           </div>
         </div>
     </div>

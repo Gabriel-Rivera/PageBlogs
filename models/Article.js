@@ -13,7 +13,3 @@ module.exports = mongoose.model('Article', ArticleSchema);
 
 
 
-// <%article.forEach(function(file){%>
-//   <img src='<%=file.pathPicture %>'>
-// <%})%>
-
