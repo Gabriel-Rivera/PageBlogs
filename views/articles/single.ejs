@@ -5,29 +5,29 @@
 <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Sitio Web</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Inicio</a></li>        
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="/user/signup"><span class="fas fa-user-circle"></span> Registrase</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/user/login"> Acceder<spanclass="caret" class="glyphicon glyphicon-log-in"></span></a>
-        <ul class="dropdown-menu nav navbar-nav navbar-right navbar-inverse" >
-            <li><a href="#"> <i class="fas fa-user"></i>   User</a></li> 
-          <li><a href="#"><i class="fab fa-facebook-square"></i>   Facebook</a></li>
-          <li><a href="#"><i class="fab fa-google"></i>   Google</a></li>
-        </ul>
-      </li>
-      <li><a href="/user/login"><span class="fas fa-sign-out-alt"></span> Salir</a></li>
-    </ul>
-  </div>      <input type="hidden" name='articleId' value='<%=article._id%>'>
 
-</nav>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Website</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Start</a></li>        
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/user/signup"><span class="fas fa-user-circle"></span> Register</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/user/login"> Login<span class="caret" class="glyphicon glyphicon-log-in"></span></a>
+          <ul class="dropdown-menu nav navbar-nav navbar-right navbar-inverse" >
+              <li><a href="/user/login"> <i class="fas fa-user"></i>   User</a></li> 
+            <li><a href="#"><i class="fab fa-facebook-square"></i>   Facebook</a></li>
+            <li><a href="/auth/google"><i class="fab fa-google"></i>   Google</a></li>
+          </ul>
+        </li>
+        <li><a href="/auth/logout" metho><span class="fas fa-sign-out-alt"></span> Logout</a></li>
+      </ul>
+    </div>
+  </nav>
 
 <div class = "container">
   <div class="row">
