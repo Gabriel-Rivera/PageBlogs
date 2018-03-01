@@ -9,7 +9,7 @@ const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 const session      = require('express-session');
 const MongoStore   = require('connect-mongo')(session);
-
+require("dotenv");
 
 //Aqui declaramos las rutas para ser utilizadas más abajo
 const authRoutes = require ("./routes/auth.js")
@@ -17,7 +17,7 @@ const index = require('./routes/index');
 //const create = require('./routes/create');
 const articles = require('./routes/articles');
 
-mongoose.connect('mongodb://localhost/pageblogs')
+mongoose.connect(process.env.DATABASE_URL)
   .then(console.log("Connected!!"))
 
 const app = express();
