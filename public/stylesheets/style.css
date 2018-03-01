@@ -1,6 +1,5 @@
 body {
   padding-top:50px;
-  background-color: whitesmoke ; 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0;
   background-color: #7db6d8;
@@ -183,3 +182,6 @@ a {
   padding-top: 15px
 }
 
+.background2{
+  background-color: #7db6d8;
+}
