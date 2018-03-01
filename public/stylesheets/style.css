@@ -104,8 +104,21 @@ a {
 .articlesPropios{
   width: 40%;
   height: 600px;
-  float: left;  
+  float: left; 
+  position: relative; 
 
+}
+#list-articles{
+  margin-left: 20px;
+  width: 450px;
+  height: 500px;
+  position: absolute;
+  border: 1px solid black;
+}
+.blogs{
+  text-align: center;
+  padding-top:20px;
+  color:rebeccapurple;
 }
   .box {
   

@@ -11,6 +11,17 @@ router.get('/', (req, res, next) => {
     res.render('articles');
   });
 
+router.get('/search-city', (req, res, next) => {
+  const city = req.query.city;
+  Article.find({ "location" : { $regex: city, $options: 'i' }})
+  .then(cities=>{
+    return res.json(cities);
+  })
+  .catch(err=>res.send(err));
+});
+
+
+
 router.post('/new', (req, res, next) =>{ 
     console.log(req.body);
     const newArticle = new Article({
@@ -31,10 +42,6 @@ router.post('/new', (req, res, next) =>{
       .then(result => res.render("articles/single", {article:result}))
   });
   
-  router.get('/:id', (req, res, next) => {
-    Article.find(req.body.location)
-      .then(result => res.render("/", {search:result}))
-  });
   const upload = multer({ dest: './public/uploads/' });
   
   router.post('/:id', upload.single('photo'), (req, res, next) =>{

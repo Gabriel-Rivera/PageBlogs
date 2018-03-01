@@ -1,4 +1,3 @@
-<html></html>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -33,7 +32,11 @@
 
     </div> 
     <div class="articlesPropios box effect5">
-      <h2 class="h2_index">Articulos Propios</h2>
+      <h2  class="h2_index">Articulos Propios</h2>
+      <div id="list-articles">
+
+      </div>
+      </div>
       <div>
 
       <div>
@@ -57,4 +60,25 @@
       Pie de Pagina
     </div>
   </footer> -->
-</html>
+<script>
+document.getElementById("findBeach").addEventListener("keydown", getCities);
+
+function getCities(e){
+  if(e.keyCode !== 13) return;
+  fetch("/articles/search-city?city="+ document.getElementById("findBeach").value)
+  .then(response=>{
+    if(!response.ok) alert("error");
+    return response.json();
+  })
+  .then(cities=>{
+    console.log(cities)
+    cities.forEach(function(city){
+      $('#list-articles').append(
+        `<li class="blogs">${city.title}</li>`
+      );
+    });
+  })
+}
+
+
+</script>
