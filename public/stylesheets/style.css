@@ -185,3 +185,8 @@ a {
 .background2{
   background-color: #7db6d8;
 }
+.button_create{
+  float:right;
+  margin-right: 30px;
+  border-radius: 5px;
+}
