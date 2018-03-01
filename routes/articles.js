@@ -12,14 +12,15 @@ router.get('/', (req, res, next) => {
   });
 
 router.post('/new', (req, res, next) =>{ 
-    console.log(req.body)
+    console.log(req.body);
     const newArticle = new Article({
       title: req.body.title,
       category: req.body.category,
-      content: req.body.content,
-    //   pathPicture: `/uploads/${req.file.filename}`
+      location: req.body.location,
+      content: req.body.content,      
+      //pathPicture: `/uploads/${req.file.filename}`
     });
-  
+    
     newArticle.save()
       .then(articleCreated => res.redirect(`/articles/${articleCreated._id}`))
       .catch(err => console.log(err));
@@ -30,6 +31,10 @@ router.post('/new', (req, res, next) =>{
       .then(result => res.render("articles/single", {article:result}))
   });
   
+  router.get('/:id', (req, res, next) => {
+    Article.find(req.body.location)
+      .then(result => res.render("/", {search:result}))
+  });
   const upload = multer({ dest: './public/uploads/' });
   
   router.post('/:id', upload.single('photo'), (req, res, next) =>{

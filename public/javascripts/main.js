@@ -23,6 +23,8 @@ function startMap() {
     // console.log(place.geometry.location.lng());
     console.log(place);
 
+    
+
 
     const newCenter = {
         lat: place.geometry.location.lat(),
