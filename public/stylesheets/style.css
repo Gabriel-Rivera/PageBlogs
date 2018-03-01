@@ -6,13 +6,10 @@ body {
 
 }
 #background-image{
-  
   position: relative;
   width: 100%;
   height: 400px;
-  background-image: url("../images/playa.jpg");
-  background-repeat: no-repeat;
-   
+  background-image: url("../images/backgroundBlue2.jpg");
 }
 
 #logo{
@@ -40,6 +37,14 @@ h1{
   top:60px;
   left: 300px;
 }
+.h2_index{
+  text-align: center;
+}
+.h2_articles{
+  padding-left: 30px;
+  color: #423517;
+  
+}
 #map{
   position: absolute;
   top:100px; 
@@ -65,6 +70,10 @@ a {
 
 .articles{
   position: relative;
+  width: 100%;
+  height: 950px;
+  background-image: url("../images/backgroundBlue2.jpg");
+  background-repeat: no-repeat;
 }
 .imagesLeft{
   width: 10%;
@@ -76,12 +85,12 @@ a {
 
 .BlogsExternos{
   width: 40%;
-  height: 600px;
+  height: 300px;
  float: left;
 }
 .imagesRight{
   width: 10%;
-  height: 600px;
+  height: 300px;
   float: left;
 
 }
@@ -100,12 +109,15 @@ a {
 }
   .box {
   
-  border-radius: 10px;
+  border-radius: 5px;
   width:40%;
   height:600px;
-  background:aquamarine;
+  background:lightblue;
   margin-top: 10px;
   margin-left:5px;
+  border-style: solid;
+  border-width: 10px;
+  border: black;
   }
   /*==================================================
   * Efecto 5
