@@ -10,7 +10,7 @@ router.get('/login', (req, res) => {
 
 router.post('/login', passport.authenticate('local-login', {
   successRedirect : '/',
-  failureRedirect : '/login'
+  failureRedirect : '/user/login'
 }));
 
 router.get('/signup', ensureLoggedOut(), (req, res) => {
@@ -22,7 +22,7 @@ router.post('/signup', ensureLoggedOut(), passport.authenticate('local-signup', 
   failureRedirect : '/user/signup'
 }));
 
-router.post('/logout', ensureLoggedIn('/login'), (req, res) => {
+router.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
 });

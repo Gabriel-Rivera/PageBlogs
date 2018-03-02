@@ -16,13 +16,13 @@
                 <li><a href="/auth/google"><i class="fab fa-google"></i>   Google</a></li>
               </ul>
             </li>
-            <li><a href="/auth/logout" metho><span class="fas fa-sign-out-alt"></span> Logout</a></li>
+            <li><a href="/user/logout" metho><span class="fas fa-sign-out-alt"></span> Logout</a></li>
           </ul>
         </div>
       </nav>
-      
 <div id="background-image" >
   <div id="logo"></div>
+  <div class="h2_index_2"><h2>Learn what's out there with 1 click!</h2></div>
   <h4 class="h4" >Search</h4>
   <input style="width:500px" type="text" id="findBeach"/>
   <div id="map"></div>
@@ -52,11 +52,7 @@
       
     </div> 
   </section>
-  <!-- <footer>
-    <div>
-      Pie de Pagina
-    </div>
-  </footer> -->
+
 <script>
 document.getElementById("findBeach").addEventListener("keydown", getCities);
 
@@ -76,6 +72,5 @@ function getCities(e){
     });
   })
 }
-
-
 </script>
+
