@@ -78,7 +78,10 @@ a {
   height: 950px;
   background-color: #7db6d8;
   float:left;
+<<<<<<< HEAD
 
+=======
+>>>>>>> da393e9ff8ec4b011144dcbb011582bba95ebb37
 }
 .imagesLeft{
   width: 10%;
@@ -121,7 +124,6 @@ a {
   height: 500px;
   position: absolute;
   margin-left: 110px;
-  border: 1px solid black;
 }
 .blogs{
   text-align: center;
