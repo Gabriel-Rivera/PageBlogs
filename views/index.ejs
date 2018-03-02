@@ -42,7 +42,7 @@
 
 
 
-        
+
       <div>
         <ul>
         </ul>
@@ -70,7 +70,7 @@ function getCities(e){
     console.log(cities)
     cities.forEach(function(city){
       $('#list-articles').append(
-        `<li class="blogs">${city.title}</li>`
+        `<li class="blogs"><a href="/articles/${city._id}">${city.title}</a></li>`
       );
     });
   })
