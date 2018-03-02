@@ -39,11 +39,25 @@ function startMap() {
         position:
             newCenter ,
         title: "I'm here"
-        });
-        
+      });
+       
     });
-   }
+  }
+    var input2 = document.getElementById("findBeach2");
+    function autocomplete(input2){
+      const dropdown2 = new google.maps.places.Autocomplete(input2);
+      dropdown2.addListener("place_changed", ()=>{
+      const place = dropdown2.getPlace();
+      // console.log(place.geometry.location.lat());
+      // console.log(place.geometry.location.lng());
+      console.log(place);
+      })  
+ 
+    
+  }
   
+  
+  autocomplete(input2);
   
     autocomplete(input);
   
